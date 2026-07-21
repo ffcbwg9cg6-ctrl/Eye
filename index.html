@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animiertes Auge</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+}
+
+.eye {
+    width: 220px;
+    height: 120px;
+    background: white;
+    border: 5px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    animation: blink 4s infinite;
+}
+
+.pupil {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 90px;
+}
+
+@keyframes blink {
+    0%, 90%, 100% {
+        height: 120px;
+    }
+    92%, 98% {
+        height: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="eye">
+    <div class="pupil"></div>
+</div>
+
+</body>
+</html>
